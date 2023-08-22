@@ -76,11 +76,12 @@ while (choice != "5")
          Console.WriteLine("Goodbye !");
          break;
    }
+
 }
 
-
-
-
+//display a list of all the cat memes
+//method that will display list of cat memes
+//void 
 
 
 
