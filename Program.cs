@@ -41,3 +41,87 @@ List<CatMeme> catMemes = new List<CatMeme>
                   PostDate = DateTime.Parse("2023-08-20")
             }
             };
+// allow user to choose options until they exit
+// 
+//Display the menu options
+string choice = null;
+while (choice != "5")
+{
+   Console.WriteLine(@"Choose an option
+   1.View all Cat Memes
+   2.Post Cat Meme
+   3.Update Cat Meme
+   4.Delete Cat Meme
+   5.Exit Menu ");
+
+   //Handle the users choice
+   choice = Console.ReadLine();
+
+
+   switch (choice)
+   {
+      case "1":
+         Console.WriteLine("View all cat memes");
+         break;
+      case "2":
+         Console.WriteLine("Post a Cat Meme");
+         break;
+      case "3":
+         Console.WriteLine("Update Cat Meme");
+         break;
+      case "4":
+         Console.WriteLine("Delete Meme");
+         break;
+      case "5":
+         Console.WriteLine("Goodbye !");
+         break;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// int parsedChoice;
+// if (int.TryParse(choice, out parsedChoice))
+// {
+//    switch (parsedChoice)
+//    {
+//       case 1:
+//          Console.WriteLine("View all cat memes");
+//          break;
+//    }
+// }
+
+// string maybeBool = "Definitely";
+
+// bool parsedBool;
+// if (bool.TryParse(maybeBool, out parsedBool))
+// {
+//    Console.WriteLine("success!");
+// }
+// else
+// {
+//    Console.WriteLine("failed!");
+
+// }
+
+//do different options based on the choice the user makes
