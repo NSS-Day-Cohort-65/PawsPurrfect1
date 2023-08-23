@@ -1,4 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
+// See https://aka.ms/new-console-template for more information
 Console.WriteLine(@"    ____                      _ __  _            __         ____                  ____          __ 
    / __ \____ __      _______(_) /_(_)   _____  / /_  __   / __ \__  ____________/ __/__  _____/ /_
   / /_/ / __ `/ | /| / / ___/ / __/ / | / / _ \/ / / / /  / /_/ / / / / ___/ ___/ /_/ _ \/ ___/ __/
@@ -61,10 +62,10 @@ while (choice != "5")
    switch (choice)
    {
       case "1":
-         Console.WriteLine("View all cat memes");
+         DisplayMemes();
          break;
       case "2":
-         Console.WriteLine("Post a Cat Meme");
+         AddMeme();
          break;
       case "3":
          Console.WriteLine("Update Cat Meme");
@@ -81,7 +82,42 @@ while (choice != "5")
 
 //display a list of all the cat memes
 //method that will display list of cat memes
-//void 
+void DisplayMemes()
+{
+   //get the list, iterate through it
+   //each iteration console writeline
+   foreach (CatMeme meme in catMemes)
+   {
+      Console.WriteLine($"{meme.Title}: {meme.Image}");
+   }
+}
+
+//add a new cat meme to the list
+
+void AddMeme()
+{
+   //capture info going into the cat meme
+   Console.WriteLine("Enter the title for your meme:");
+   string memeTitle = Console.ReadLine();
+   Console.WriteLine("Enter the image URL for your meme:");
+   string memeURL = Console.ReadLine();
+   Console.WriteLine("Enter the description for your meme:");
+   string memeDescription = Console.ReadLine();
+   //create a new cat meme object and put that info in it
+   CatMeme newCatMeme = new CatMeme
+   {
+      Title = memeTitle,
+      Image = memeURL,
+      Description = memeDescription,
+      UserId = 1,
+      PostDate = DateTime.Now
+   };
+   //add the new cat meme to the database
+   catMemes.Add(newCatMeme);
+}
+
+
+
 
 
 

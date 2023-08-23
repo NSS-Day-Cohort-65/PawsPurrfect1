@@ -1,7 +1,7 @@
 # Pawsitively Purrfect
 1. Display some kind of menu of options. x
-1. View the cat memes 
-1. Post a cat meme
+1. View the cat memes x
+1. Post a cat meme 
 1. Update the cat meme
     - update cat meme text
     - Update the cat meme description
