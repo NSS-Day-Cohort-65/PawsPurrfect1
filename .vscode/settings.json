@@ -1,3 +1,8 @@
 {
-    "dotnet.defaultSolution": "PawsPurrfect1.sln"
+    "dotnet.defaultSolution": "PawsPurrfect1.sln",
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#342D10",
+        "titleBar.activeBackground": "#494016",
+        "titleBar.activeForeground": "#FCFBF5"
+    }
 }

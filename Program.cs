@@ -21,9 +21,40 @@ List<User> users = new List<User>
       Name = "Sir Purs Alot",
       Id = 2,
       UserName = "PurrfectPants",
-   }
+   },
+   new User()
+   {
+      Name = "Mister Meows",
+      Id = 3,
+      UserName = "Meow",
+   },
+   new User()
+   {
+      Name = "Dog",
+      Id = 4,
+      UserName = "Spot",
+   },
 };
 
+
+//First(OrDefault)
+User mister = users.FirstOrDefault(u => u.Name.StartsWith("mister"));
+Console.WriteLine(mister);
+//Where
+List<string> under3 = users
+   .Where(u => u.Id < 3)
+   .Select(u => u.Name.ToUpper() + u.Id.ToString())
+   .ToList();
+foreach (var user in under3)
+{
+   Console.WriteLine(user);
+}
+//Select
+// List<string> screamedUsers = users;
+// foreach (var name in screamedUsers)
+// {
+//    Console.WriteLine(name);
+// }
 
 List<CatMeme> catMemes = new List<CatMeme>
             {
